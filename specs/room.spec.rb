@@ -108,39 +108,9 @@ class TestRoom < MiniTest::Test
   def test_guest_cheers_for_fav_song
     @room.add_guests(@guest1)
     @room.add_guests(@guest2)
-    songs_to_add = @song2
-    @room.add_songs(songs_to_add)
-    assert_equal("Ryan is whooping", @room.guest_cheer(@guest2))
+    @room.add_songs(@song2)
+    @room.add_songs(@song1)
+    assert_equal("Ryan is whooping", @room.guest_cheer(@guest1))
   end
 
-
-
-
-
-
-
-
-
-
-
-  # def test_add_song_to_room
-  #   @song1 = Song.new("Can't Stop")
-  #   assert_equal("Can't Stop", @song1.title)
-  # end
-  #
-  # def test_add_guest_to_room
-  #   @guest1 = Guest.new("Ryan")
-  #   assert_equal("Ryan", @guest1.name)
-  # end
-  #
-  # def test_remove_guest_from_room
-  #   @guest1 = Guest.new("Ryan")
-  #   assert_equal("Ryan", @guest1.name)
-  # end
-
 end
-
-
-
-  # - Check in guests to rooms/Check out guests from rooms
-  # - Add songs to rooms

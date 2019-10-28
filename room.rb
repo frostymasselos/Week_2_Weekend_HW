@@ -50,17 +50,17 @@ class Room
 
   def guest_cheer(guest)
     for sng in @song
-      for gues in @guest
-        if sng.title == gues.fav_song
-          return gues.whoop
+      # for gues in @guest
+        if sng.title == guest.fav_song
+          return guest.whoop
         end
         return "No favourite songs present for #{guest}"
-      end
+      # end
     end
   end
 
-  # It's limited because as it iterates through each song
+  # Is it limited because as it iterates through each song
   # and guest, the first one it finds it's going to return
-  # that one and stop. Need an .each method.
+  # that one and stop? Need an .each method.
 
 end
